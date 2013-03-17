@@ -10,8 +10,10 @@ manages when they start, and delete those files when the processes stop.
 By default, the files are written to `/var/run/supervisor/{processname}.pid`,
 you can change this by passing in the `--location` argument. This argument also
 accepts all the keys associated with the Supervisor events (e.g. `processname`,
-`groupname`, `from_state`. More info [here](http://supervisord.org/events.html
-#process-state-running-event-type)). Make sure the directory containing the PID files exist, and Supervisor has permission to write to that directory.
+`groupname`, `from_state`. More info
+[here](http://supervisord.org/events.html#process-state-running-event-type)).
+Make sure the directory containing the PID files exist, and Supervisor has
+permission to write to that directory.
 
 In order to use this program, add it to your `supervisord.conf` file. It is
 advisable to only listen to `PROCESS_STATE_RUNNING` and `PROCESS_STATE_STOPPED`
